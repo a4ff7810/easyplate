@@ -4,7 +4,7 @@ import os
 import platform
 
 
-__version__ = "1.0.dev3"
+__version__ = "1.0.dev4"
 
 
 class ParserTUI:
@@ -38,6 +38,9 @@ class ParserTUI:
     def mode_pick_input(self):
         files = [x for x in os.listdir() if os.path.isfile(x)]
         files = [x for x in files if os.path.splitext(x)[1] == ".DAT"]
+        if not files:
+            print("Error! No .DAT files in this directory!")
+            self.finish()
         print()
         selected_files = self.select_from_list(files, n=1000, message="Choose DAT files", ask_all=True)
         print()
@@ -139,7 +142,8 @@ class ParserTUI:
                 return n
 
     def finish(self):
-        print("Finished!")
+        print()
+        print("**PRESS ENTER TO EXIT")
         input()
         sys.exit(0)
 

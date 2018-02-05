@@ -1,9 +1,10 @@
 from plateparser2 import PlateParser
+import sys
 import os
 import platform
 
 
-__version__ = "1.0.dev1"
+__version__ = "1.0.dev2"
 
 
 class ParserTUI:
@@ -137,6 +138,11 @@ class ParserTUI:
             else:
                 return n
 
+    def finish(self):
+        print("Finished!")
+        input()
+        sys.exit(0)
+
     def instructions(self):
         print("Built by Zac Rubin.")
         print()
@@ -162,6 +168,7 @@ class ParserTUI:
         print("Data loaded OKAY!", end="\n\n")
         self.heading("WRITE DATA")
         self.mode_output_csv()
+        self.finish()
 
 
 if __name__ == "__main__":

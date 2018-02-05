@@ -1,10 +1,10 @@
-from plateparser2 import PlateParser
+from plateparser2 import PlateParser, PlateParserError
 import sys
 import os
 import platform
 
 
-__version__ = "1.0.dev2"
+__version__ = "1.0.dev3"
 
 
 class ParserTUI:
@@ -162,7 +162,12 @@ class ParserTUI:
         print(end="\n\n")
         self.window()
         self.heading("SELECT DATA")
-        self.mode_pick_dates()
+        try:
+            self.mode_pick_dates()
+        except PlateParserError as e:
+            print("ERROR!")
+            print(e)
+            self.finish()
         print(end="\n\n")
         self.window()
         print("Data loaded OKAY!", end="\n\n")

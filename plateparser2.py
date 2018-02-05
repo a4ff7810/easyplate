@@ -111,7 +111,7 @@ class PlateParser:
         data = self._data[(self._data.index >= start) & (self._data.index <= end)]
         n_testnames = len(set(data['testname']))
         if n_testnames > 1:
-            raise ValueError("More than one testname in the data range!")
+            raise PlateParserError("More than one testname in the data range!")
         return Plate(data, data['testname'].values[1])
         
 

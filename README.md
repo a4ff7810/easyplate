@@ -6,7 +6,7 @@ Bioscience Plate Readers often produce data in file formats that makes analysis 
 
 This tool converts BMG Plate Reader raw data in to CSV, for quicker analysis.
 
-### Plateform Support
+### Platform Support & Downloads
 Stand-alone binaries compiled with [pyinstaller](https://github.com/pyinstaller/pyinstaller) are available for Windows and Debian-based operating systems.
 
 ### Features

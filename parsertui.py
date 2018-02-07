@@ -47,7 +47,7 @@ class ParserTUI:
         self.parser = PlateParser(selected_files)
 
     def mode_pick_dates(self):
-        selected_dates = self.select_from_list(self.parser.dates, n=2, message="Choose the range of dates (one at a time)")
+        selected_dates = self.select_from_list(self.parser.dates, n=2, message="Choose dates by range (start and end")
         print()
         plate = self.parser.plate_from_daterange(selected_dates[0], selected_dates[1])
         self.plate = plate
@@ -165,7 +165,7 @@ class ParserTUI:
         self.mode_pick_input()
         print(end="\n\n")
         self.window()
-        self.heading("SELECT DATA")
+        self.heading("FILTER DATA BY DATES")
         try:
             self.mode_pick_dates()
         except PlateParserError as e:

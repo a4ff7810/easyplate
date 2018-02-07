@@ -19,3 +19,4 @@ Stand-alone binaries compiled with [pyinstaller](https://github.com/pyinstaller/
 ## TODO
 - Parsers for different Plate Readers
 - Proper code packaging
+- Use a proper TUI framework instead of own dodgy implementation

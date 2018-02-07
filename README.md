@@ -16,6 +16,8 @@ This tool converts BMG Plate Reader raw data in to CSV, for quicker analysis.
 ### Platform Support & Downloads
 Stand-alone executables compiled with [pyinstaller](https://github.com/pyinstaller/pyinstaller) are available for Windows and Debian-based operating systems.
 
+**See the [releases](../../releases) page for downloads!**
+
 ### Usage
 Place the executable in a directory that contains only the .DAT files you wish to parse.
 

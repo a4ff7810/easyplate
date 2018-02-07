@@ -14,7 +14,7 @@ This tool converts BMG Plate Reader raw data in to CSV, for quicker analysis.
 - Outputs to CSV
 
 ### Platform Support & Downloads
-Stand-alone executables compiled with [pyinstaller](https://github.com/pyinstaller/pyinstaller) are available for Windows and Debian-based operating systems.
+Stand-alone executables compiled with [pyinstaller](https://github.com/pyinstaller/pyinstaller) are available for Windows.
 
 **See the [releases](../../releases) page for downloads!**
 

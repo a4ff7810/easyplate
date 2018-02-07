@@ -4,7 +4,7 @@ import os
 import platform
 
 
-__version__ = "1.0.dev5"
+__version__ = "1.0.0"
 
 
 class ParserTUI:

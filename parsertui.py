@@ -4,7 +4,7 @@ import os
 import platform
 
 
-__version__ = "1.0.dev4"
+__version__ = "1.0.dev5"
 
 
 class ParserTUI:
@@ -47,7 +47,7 @@ class ParserTUI:
         self.parser = PlateParser(selected_files)
 
     def mode_pick_dates(self):
-        selected_dates = self.select_from_list(self.parser.dates, n=2, message="Choose dates by range (start and end")
+        selected_dates = self.select_from_list(self.parser.dates, n=2, message="Choose dates by range (start and end, inclusive)")
         print()
         plate = self.parser.plate_from_daterange(selected_dates[0], selected_dates[1])
         self.plate = plate
@@ -143,18 +143,23 @@ class ParserTUI:
 
     def finish(self):
         print()
-        print("**PRESS ENTER TO EXIT")
+        print(">> PRESS ENTER TO EXIT")
         input()
         sys.exit(0)
 
     def instructions(self):
-        print("Built by Zac Rubin.")
-        print()
-        print("Please ensure that the files have the .DAT extension.")
-        print("Please ensure that the files are in the same directory as this program.", end="\n\n")
-        print("Input options are shown in square brackets - eg ['Y'].")
-        print("When prompted for multiple options, press ENTER after each individual option.")
-        print("Remember that options are zero-indexed (ie 0 is for the first option).")
+        print("""Built by Zac Rubin github.com/z-0
+
+~Currently tested with BMG Labtech Fluostar Optima data~
+
+USAGE
+
+Please ensure that the files have the .DAT extension.
+Please ensure that the files are in the same directory as this program.
+User interaction is prompted by '>>'.
+Input options are shown in square brackets - eg ['Y'].
+When prompted for multiple options, press ENTER after each individual option.
+Remember that options are zero-indexed (ie 0 is for the first option).""")
         print()
         print("***")
         print()

@@ -102,7 +102,7 @@ class PlateParser:
         if not isinstance(start, datetime):
             raise TypeError("Start date must be datetime")
         if not isinstance(end, datetime):
-            raise TypeError("Start date must be datetime")
+            raise TypeError("End date must be datetime")
         if not start in self.dates:
             raise ValueError("Invalid start date! Must be exact datetime match")
         if not end in self.dates:
